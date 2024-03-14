@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Cards Generator</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -12,18 +12,30 @@
     />
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
-  <body>
+  <body class="bg-success">
     <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+      <div class="row d-flex justify-content-center my-5 mx-1">
+        <div class="col-8 card bg-white">
+          <div class="row theRowSuit justify-content-start">
+            <div class="col-3 theSuit" id="firstColumn">♦</div>
+          </div>
+          <div class="row theRowValue">
+            <div class="col align-self-center" id="centralColumn">8</div>
+          </div>
+          <div class="row theRowSuit mt-5 justify-content-end">
+            <div class="col-3 theSuit" id="thirdColumn">♦</div>
+          </div>
+        </div>
+      </div>
+
+      <button onClick="window.location.reload();">New Card</button>
+      <div class="fixed-bottom fs-1 p-4">
+        Made by Fali
+        <a class="text-white" href="https://www.4geeksacademy.com"
+          >4Geeks Academy</a
+        >
       </div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
