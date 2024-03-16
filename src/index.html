@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cards Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Bangers&family=Trade+Winds&family=Zen+Dots&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -14,28 +20,81 @@
   </head>
   <body class="bg-success">
     <div class="container-fluid text-center">
-      <div class="row d-flex justify-content-center my-5 mx-1">
-        <div class="col-8 card bg-white">
+      <div class="row row-gap-5 d-flex justify-content-center my-5 mx-1">
+        <div class="col-8 card bg-white" id="idCard">
           <div class="row theRowSuit justify-content-start">
             <div class="col-3 theSuit" id="firstColumn">♦</div>
           </div>
-          <div class="row theRowValue">
-            <div class="col align-self-center" id="centralColumn">8</div>
+          <div class="row row-gap-3 theRowValue">
+            <div class="col" id="centralColumn">8</div>
           </div>
-          <div class="row theRowSuit mt-5 justify-content-end">
+          <div class="row row-gap-3 theRowSuit mt-5 justify-content-end">
             <div class="col-3 theSuit" id="thirdColumn">♦</div>
           </div>
         </div>
       </div>
+      <button onclick="cardGenerate();">New Card</button>
+      <button onclick="drawHand();">New Card 2 seconds</button>
+      <button onclick="stopDrawHand();">Stop New Card</button>
+      <div class="row zen-dots-regular d-flex justify-content-center ">
+        <div class="col-4 mt-5">
+          <h1>
+            Change size of the card
+          </h1>
+          <div class="row row-gap-3">
+            <div class="col">
+              <h1>
+                <i class="fa-solid fa-down-long"></i>
+              </h1>
+            </div>
+          </div>
+          <div class="row row-gap-3 justify-content-center">
+            <div class="col-8">
+              <label for="heigth"
+                ><h3>
+                  Width
+                </h3></label
+              >
+              <input
+                class="form-control"
+                id="width"
+                name="width"
+                type="number"
+                placeholder="Insert the Width"
+              />
+            </div>
+          </div>
+          <div class="row row-gap-3 my-3 justify-content-center">
+            <div class="col-8">
+              <label for="heigth"
+                ><h3>
+                  Heigth
+                </h3></label
+              >
+              <input
+                class="form-control"
+                id="heigth"
+                name="heigth"
+                type="number"
+                placeholder="Insert the heigth"
+              />
+            </div>
+          </div>
+          <button onclick="changeSize();">Change Size</button>
+        </div>
+      </div>
 
-      <button onClick="window.location.reload();">New Card</button>
-      <div class="fixed-bottom fs-1 p-4">
+      <div class="fixedbottom fs-1 p-4">
         Made by Fali
-        <a class="text-white" href="https://www.4geeksacademy.com"
-          >4Geeks Academy</a
-        >
+        <a id="iconGit" class="text-white" href="https://github.com/Fali1980">
+          My GitHub <i class="fa-brands fa-github drop"></i
+        ></a>
       </div>
     </div>
+    <script
+      src="https://kit.fontawesome.com/61ca86d72a.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="app.js"></script>
   </body>
 </html>

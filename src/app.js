@@ -4,10 +4,8 @@ import "./style.css";
 
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
-
-window.onload = function() {
-  //write your code here
-
+///
+window.cardGenerate = function() {
   const cardValue = [
     "A",
     "2",
@@ -36,5 +34,27 @@ window.onload = function() {
   if (randomSuit === "♦" || randomSuit === "♥") {
     document.getElementById("firstColumn").style.color = "red";
     document.getElementById("thirdColumn").style.color = "red";
+    document.getElementById("centralColumn").style.color = "red";
+  } else {
+    document.getElementById("firstColumn").style.color = "";
+    document.getElementById("thirdColumn").style.color = "";
+    document.getElementById("centralColumn").style.color = "";
   }
+};
+
+window.onload = function() {
+  cardGenerate();
+};
+let intervalId = null;
+window.drawHand = function() {
+  intervalId = setInterval(cardGenerate, 2000);
+};
+window.stopDrawHand = function() {
+  clearInterval(intervalId);
+};
+window.changeSize = function() {
+  let widthValue = document.getElementById("width").value;
+  let heigthValue = document.getElementById("heigth").value;
+  document.getElementById("idCard").style.height = heigthValue + "px";
+  document.getElementById("idCard").style.width = widthValue + "px";
 };

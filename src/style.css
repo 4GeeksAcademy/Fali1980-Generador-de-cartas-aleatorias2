@@ -5,7 +5,11 @@
   height: 530px;
   border: 1px solid #000;
   border-radius: 15px;
-  box-shadow: 14px 20px;
+  box-shadow: 20px 20px 7px 6px;
+}
+
+#iconGit {
+  text-shadow: 2px 3px 2px black;
 }
 
 .theRowSuit {
@@ -44,4 +48,10 @@ button:focus {
 button:active {
   transform: translate(0, 0);
   border-bottom: 2px solid rgb(50, 50, 50);
+}
+/* Estilo de letra */
+.zen-dots-regular {
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
